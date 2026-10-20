@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PokéTest: explorador Pokémon con pruebas automatizadas de interfaz y API.">
+    <title>PokéTest | Explorador Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#inicio" class="logo" aria-label="Ir al inicio">
+            <span>Poké</span>Test
+        </a>
+
+        <nav aria-label="Menú principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#explorador">Explorador</a>
+            <a href="#acerca">Acerca de</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <p class="eyebrow">EXPLORADOR DIGITAL</p>
+            <h1>¡Descubre tu próximo <span>Pokémon!</span></h1>
+            <p class="description">
+                Busca tus Pokémon favoritos y descubre sus características
+                utilizando datos de la PokéAPI.
+            </p>
+            <a href="#explorador" class="button" id="explorarBtn">
+                Explorar Pokémon
+            </a>
+        </section>
+
+        <section id="explorador" class="explorer">
+            <h2>Explorador Pokémon</h2>
+            <p>Escribe el nombre o número de un Pokémon.</p>
+
+            <form id="searchForm">
+                <label for="pokemonInput">Nombre o número</label>
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="pokemonInput"
+                        placeholder="Ejemplo: pikachu"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="searchBtn">Buscar</button>
+                </div>
+            </form>
+
+            <p id="status" role="status" aria-live="polite"></p>
+
+            <article id="pokemonCard" class="pokemon-card" hidden>
+                <img id="pokemonImage" src="" alt="">
+                <h3 id="pokemonName"></h3>
+                <p id="pokemonNumber"></p>
+                <p id="pokemonTypes"></p>
+            </article>
+        </section>
+
+        <section id="acerca" class="about">
+            <h2>Acerca de PokéTest</h2>
+            <p>
+                Este proyecto académico demuestra cómo probar una aplicación
+                web y una API mediante pruebas automatizadas con Playwright.
+            </p>
+            <p>Datos proporcionados por la PokéAPI.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>PokéTest © 2026 | Proyecto académico de pruebas automatizadas</p>
+    </footer>
+</body>
+</html>
