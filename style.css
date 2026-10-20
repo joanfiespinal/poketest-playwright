@@ -1,0 +1,242 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111c32;
+    border-bottom: 1px solid #263550;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #f8fafc;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Inicio */
+.hero {
+    min-height: 390px;
+    padding: 85px 20px;
+    text-align: center;
+    background: radial-gradient(circle at top, #243b68, #0f172a 70%);
+}
+
+.eyebrow {
+    color: #38bdf8;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.description {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    color: #cbd5e1;
+}
+
+.button,
+.search-box button {
+    display: inline-block;
+    background: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover,
+.search-box button:hover {
+    background: #0369a1;
+    transform: translateY(-2px);
+}
+
+/* Explorador */
+.explorer {
+    padding: 65px 20px;
+    text-align: center;
+    max-width: 760px;
+    margin: auto;
+}
+
+.explorer h2,
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.explorer > p {
+    color: #cbd5e1;
+}
+
+#searchForm {
+    margin-top: 25px;
+    text-align: left;
+}
+
+#searchForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background: #1e293b;
+    color: white;
+    font-size: 16px;
+}
+
+.search-box input:focus {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+}
+
+#status {
+    margin-top: 20px;
+    color: #7dd3fc;
+}
+
+.pokemon-card {
+    margin: 25px auto 0;
+    padding: 25px;
+    max-width: 360px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px #0003;
+}
+
+.pokemon-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.pokemon-card h3 {
+    text-transform: capitalize;
+    font-size: 27px;
+    color: #7dd3fc;
+}
+
+.pokemon-card p {
+    color: #cbd5e1;
+    margin-top: 5px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Información */
+.about {
+    text-align: center;
+    padding: 55px 20px;
+    background: #111c32;
+}
+
+.about p {
+    max-width: 650px;
+    margin: 10px auto;
+    color: #cbd5e1;
+}
+
+/* Pie de página */
+footer {
+    padding: 22px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 65px 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+}
